@@ -15,4 +15,11 @@
 
 ## 3. Calcolare la media dei voti di ogni appello d'esame
 
+- SELECT 
+- exam_id, 
+- AVG(vote) average_vote
+- FROM university_db.exam_student
+- GROUP BY exam_id;
+    
+
 ## 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
