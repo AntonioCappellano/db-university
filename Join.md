@@ -29,7 +29,15 @@
 
 
 ## 4. Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e nome (5000)
-
+- SELECT students.name,
+- students.surname,
+- degrees.name degree_name,
+- departments.name departments_name 
+- FROM university_db.students
+- INNER JOIN degrees ON degree_id = degrees.id
+- INNER JOIN departments ON department_id = departments.id
+- ORDER BY 
+- students.name ASC, students.surname ASC
 
 ## 5. Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti (1317)
 
