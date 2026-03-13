@@ -40,6 +40,19 @@
 - students.name ASC, students.surname ASC
 
 ## 5. Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti (1317)
+- - SELECT 
+    - degrees.name,
+    - courses.name,
+    - teachers.name,
+    - teachers.surname 
+-  FROM 
+    university_db.degrees
+-  INNER JOIN 
+    courses ON degrees.id = courses.degree_id
+- INNER JOIN 
+    course_teacher ON courses.id = course_teacher.course_id
+-  INNER JOIN 
+    teachers ON teachers.id = course_teacher.teacher_id
 
 ## 6. Selezionare tutti i docenti che insegnano nel Dipartimento di Matematica (54)
 
